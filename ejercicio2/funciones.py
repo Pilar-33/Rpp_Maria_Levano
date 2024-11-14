@@ -1,4 +1,11 @@
 
+def validar_matriz_cuadrada(matriz: list):
+    filas = len(matriz)
+    for fila in matriz:
+        if len(fila) != filas:
+            return False
+    return True
+
 #1. Generar una función que calcule la media geométrica de filas o columnas de una matriz
 #cuadrada.
 
@@ -51,16 +58,13 @@ def calcular_suma(matriz: list, diagonal: str) -> None:
     Recibe la matriz y la diagonal con la que se va operar.
     Devuelve el resultado de la suma.
     """
-    filas = len(matriz)
-    for fila in matriz:
-        if len(fila) != filas:
-            return False
-    
+    if not validar_matriz_cuadrada(matriz):
+        return "La matriz no es cuadrada."
     
     suma_diagonal_principal = 0
     for i in range(len(matriz)):
         for j in range(len(matriz[0])):
-            if i == j :
+            if i == j:
                 suma_diagonal_principal += matriz[i][j]
 
 
@@ -84,6 +88,9 @@ def devolver_transpuesta(matriz: list) -> None:
     Recibe la matriz la cual va transponer.
     Devuelve la matriz transpuesta.
     """
+    if not validar_matriz_cuadrada(matriz):
+        return "La matriz no es cuadrada."
+    
     for i in range(len(matriz[0])):
         for j in range(len(matriz)):
             print(matriz[j][i], end = " ")
