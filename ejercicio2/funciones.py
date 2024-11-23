@@ -71,7 +71,7 @@ def calcular_suma(matriz: list, diagonal: str) -> None:
     suma_diagonal_secundaria = 0
     n = len(matriz)
     for j in range(n):
-        suma_diagonal_secundaria += matriz[i][n - 1 - j]
+        suma_diagonal_secundaria += matriz[j][n - 1 - j]
 
     if diagonal == "principal":
         print(f"La suma de la diagonal {diagonal} es: {suma_diagonal_principal}")

@@ -4,23 +4,23 @@ system("cls")
 from ejercicio2.funciones import *
 
 matriz = [
-    [1, 2, 3],
+    [1, 2, 5],
     [4, 5, 6],
-    [10, 8, 9]
+    [10, 8, 10]
 ]
 
 # nro 1
-fila_columna = "filas"
-fila_columna1 = "columnas"
-media_fila = calcular_media_filas_columnas(matriz, fila_columna)
-print(f"Media geometrica {fila_columna} es: {media_fila}")
+#fila_columna = "filas"
+#fila_columna1 = "columnas"
+#media_fila = calcular_media_filas_columnas(matriz, fila_columna)
+#print(f"Media geometrica {fila_columna} es: {media_fila}")
 
-media_fila1 = calcular_media_filas_columnas(matriz, fila_columna1)
-print(f"Media geometrica {fila_columna1} es: {media_fila1}")
+#media_fila1 = calcular_media_filas_columnas(matriz, fila_columna1)
+#print(f"Media geometrica {fila_columna1} es: {media_fila1}")
 
 # nro 2
-#calcular_suma(matriz, "secundaria")
-#calcular_suma(matriz, "principal")
+calcular_suma(matriz, "secundaria")
+calcular_suma(matriz, "principal")
 
 #nro 3
 #devolver_transpuesta(matriz)
